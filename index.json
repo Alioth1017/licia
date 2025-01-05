@@ -266,6 +266,25 @@
             "browser"
         ]
     },
+    "Channel": {
+        "dependencies": [
+            "Emitter",
+            "each",
+            "remove",
+            "some"
+        ],
+        "description": "Interconnectable Message channel.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.42.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "Class": {
         "demo": true,
         "dependencies": [
@@ -1907,6 +1926,30 @@
             "browser"
         ]
     },
+    "dataUrl": {
+        "dependencies": [
+            "isDataUrl",
+            "trim",
+            "endWith",
+            "startWith",
+            "contain",
+            "decodeUriComponent",
+            "defaults",
+            "isStr",
+            "convertBin"
+        ],
+        "description": "Parse and stringify data urls.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.41.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "dateFormat": {
         "dependencies": [
             "isStr",
@@ -2147,7 +2190,8 @@
     },
     "detectOs": {
         "dependencies": [
-            "isBrowser"
+            "isBrowser",
+            "isNode"
         ],
         "description": "Detect operating system using ua.",
         "env": [
@@ -2202,6 +2246,21 @@
         "env": [
             "browser"
         ],
+        "test": [
+            "browser"
+        ]
+    },
+    "dpr": {
+        "demo": true,
+        "dependencies": [
+            "Emitter",
+            "MediaQuery"
+        ],
+        "description": "Device pixel ratio helper.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.46.0",
         "test": [
             "browser"
         ]
@@ -2486,7 +2545,10 @@
         ]
     },
     "fileSize": {
-        "dependencies": [],
+        "dependencies": [
+            "isStr",
+            "toNum"
+        ],
         "description": "Turn bytes into human readable file size.",
         "env": [
             "node",
@@ -2997,7 +3059,8 @@
             "each",
             "unique",
             "trim",
-            "map"
+            "map",
+            "isFn"
         ],
         "description": "Capture keyboard input to trigger given events.",
         "env": [
@@ -3673,6 +3736,22 @@
             "browser"
         ]
     },
+    "isMac": {
+        "dependencies": [
+            "detectOs"
+        ],
+        "description": "Check if platform is mac.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.40.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "isMap": {
         "dependencies": [
             "objToStr"
@@ -4006,6 +4085,17 @@
             "browser"
         ]
     },
+    "isShadowRoot": {
+        "dependencies": [],
+        "description": "Check if value is a ShadowRoot object.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.43.0",
+        "test": [
+            "browser"
+        ]
+    },
     "isSorted": {
         "dependencies": [],
         "description": "Check if an array is sorted.",
@@ -4043,6 +4133,7 @@
             "browser",
             "miniprogram"
         ],
+        "since": "1.39.0",
         "test": [
             "node",
             "browser"
@@ -4148,13 +4239,18 @@
         ]
     },
     "isWindows": {
-        "dependencies": [],
+        "dependencies": [
+            "detectOs"
+        ],
         "description": "Check if platform is windows.",
         "env": [
-            "node"
+            "node",
+            "browser",
+            "miniprogram"
         ],
         "test": [
-            "node"
+            "node",
+            "browser"
         ]
     },
     "jsonClone": {
@@ -4264,6 +4360,7 @@
             "stackTrace",
             "splitPath",
             "startWith",
+            "endWith",
             "defineProp",
             "isStr",
             "has",
@@ -5129,6 +5226,19 @@
             "browser"
         ]
     },
+    "pointerEvent": {
+        "dependencies": [
+            "root"
+        ],
+        "description": "Get the pointer event name, use touch and mouse events as a fallback if not supported.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.42.0",
+        "test": [
+            "browser"
+        ]
+    },
     "precision": {
         "dependencies": [],
         "description": "Find decimal precision of a given number.",
@@ -5830,6 +5940,22 @@
             "browser"
         ]
     },
+    "singleton": {
+        "dependencies": [
+            "has"
+        ],
+        "description": "Ensure an async function is only called once before it resolves.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.44.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "size": {
         "dependencies": [
             "isArrLike",
@@ -6304,7 +6430,11 @@
             "strWidth",
             "map",
             "repeat",
-            "cloneDeep"
+            "cloneDeep",
+            "defaults",
+            "trim",
+            "rtrim",
+            "filter"
         ],
         "description": "Output table string.",
         "env": [
@@ -6334,6 +6464,20 @@
             "browser"
         ]
     },
+    "theme": {
+        "dependencies": [
+            "Emitter",
+            "MediaQuery"
+        ],
+        "description": "Theme helper.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.44.0",
+        "test": [
+            "browser"
+        ]
+    },
     "throttle": {
         "dependencies": [
             "debounce"
@@ -6359,6 +6503,19 @@
         "env": [
             "node"
         ],
+        "test": [
+            "node"
+        ]
+    },
+    "tildify": {
+        "dependencies": [
+            "startWith"
+        ],
+        "description": "Convert absolute path to tilde path.",
+        "env": [
+            "node"
+        ],
+        "since": "1.40.0",
         "test": [
             "node"
         ]

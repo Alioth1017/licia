@@ -1,6 +1,6 @@
 {
   "name": "licia",
-  "version": "1.38.2",
+  "version": "1.46.0",
   "description": "Useful utility collection with zero dependencies",
   "bin": {
     "licia": "./bin/licia.js"
@@ -31,7 +31,8 @@
     "url": "git+https://github.com/liriliri/licia.git"
   },
   "keywords": [
-    "eustia"
+    "eustia",
+    "util"
   ],
   "author": "redhoodsu",
   "license": "MIT",
@@ -56,7 +57,7 @@
     "eslint": "^6.2.2",
     "eustia": "^0.9.0",
     "eustia-component": "^0.0.3",
-    "execa": "^2.0.4",
+    "execa": "^5.1.1",
     "glob": "^7.1.4",
     "karma": "^6.3.19",
     "karma-babel-preprocessor": "^8.0.1",
@@ -70,6 +71,6 @@
     "ncp": "^2.0.0",
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
-    "typescript": "^3.6.2"
+    "typescript": "^5.3.2"
   }
 }

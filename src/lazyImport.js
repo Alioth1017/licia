@@ -28,7 +28,7 @@
  */
 
 _(
-    'stackTrace splitPath startWith defineProp isStr has objToStr unique concat keys isArr toBool'
+    'stackTrace splitPath startWith endWith defineProp isStr has objToStr unique concat keys isArr toBool'
 );
 
 const path = require('path');
@@ -41,6 +41,17 @@ exports = function(importFn, dirname) {
             }
             moduleId = path.join(dirname, moduleId);
         }
+
+        const { cache } = importFn;
+        if (cache) {
+            if (cache[moduleId]) {
+                return importFn(moduleId);
+            }
+            if (!endWith(moduleId, '.js') && cache[`${moduleId}.js`]) {
+                return importFn(`${moduleId}.js`);
+            }
+        }
+
         return proxyExports(importFn, moduleId);
     };
 };

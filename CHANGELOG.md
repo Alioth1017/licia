@@ -1,3 +1,52 @@
+## v1.46.0 (27 Nov 2024)
+
+* feat: add dpr
+* feat(fileSize): turn back to bytes
+
+## v1.45.0 (18 Nov 2024)
+
+* feat(table): parse table string
+
+## v1.44.0 (2 Nov 2024)
+
+* feat: add singleton
+* feat: add theme
+
+## v1.43.0 (9 Oct 2024)
+
+* feat: add isShadowRoot
+* fix(isErr): DOMException return false
+
+## v1.42.0 (20 Sep 2024)
+
+* feat: add Channel
+* feat: add pointerEvent
+
+## v1.41.1 (23 Jul 2024)
+
+* fix: randomId size over 21 error [#33](https://github.com/liriliri/licia/issues/33)
+
+## v1.41.0 (18 Jun 2024)
+
+* feat: add dataUrl
+
+## v1.40.0 (31 May 2024)
+
+* feat: add tildify
+* feat: add isMac
+
+## v1.39.2 (22 Dec 2023)
+
+* feat(hotkey): support element option
+
+## v1.39.1 (21 Nov 2023)
+
+* fix: lazyImport 
+
+## v1.39.0 (21 Nov 2023)
+
+* feat: add isStrBlank
+
 ## v1.38.2 (4 Jul 2023)
 
 * fix(remove): loop through undefined values
